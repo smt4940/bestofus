@@ -16,7 +16,7 @@ public class Main {
         jFrame.setVisible(true);
         jButton.addActionListener(e->{
             System.out.println("New Game Pressed!");
-            GamePane gamePane = GamePane.getInstance(1);
+            GameLevel gameLevel = GameLevel.getInstance(1);
         });
     }
 }
