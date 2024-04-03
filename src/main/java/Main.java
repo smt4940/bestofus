@@ -14,9 +14,11 @@ public class Main {
         jFrame.setBounds(0,0,800,600);
         jFrame.revalidate();
         jFrame.setVisible(true);
+        var interim = 1l;
+        System.out.println(interim);
         jButton.addActionListener(e->{
             System.out.println("New Game Pressed!");
-            GameLevel gameLevel = GameLevel.getInstance(1);
+            FrontPanel frontPanel = FrontPanel.getInstance(GamePanel.GameLevel);
         });
     }
 }
