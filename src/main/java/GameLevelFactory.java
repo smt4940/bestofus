@@ -1,6 +1,5 @@
-import javax.swing.*;
+public abstract class GameLevelFactory {
+    void getLevel(int level) {
 
-public interface GameLevelFactory {
-
-     getLevel(int level);
+    }
 }

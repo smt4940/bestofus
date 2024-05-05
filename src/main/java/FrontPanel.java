@@ -1,7 +1,7 @@
 import javax.swing.*;
 
-public class FrontPanel extends JPanel {
-    private static int level;
+public class FrontPanel<GameLevelFactory> extends JPanel {
+    private static Integer level = 0;
     private GameLevelFactory levelFactory;
     private JPanel levelPanel = new JPanel();
     private static final FrontPanel instance = null;

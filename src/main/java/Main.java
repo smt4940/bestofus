@@ -9,16 +9,16 @@ public class Main {
         JButton jButton = new JButton("New Game");
         jPanel.add(jButton);
         jFrame.add(jPanel);
-        jPanel.setBounds(0,0,800,600);
+        jPanel.setBounds(0, 0, 800, 600);
         jPanel.setBackground(Color.lightGray);
-        jFrame.setBounds(0,0,800,600);
+        jFrame.setBounds(0, 0, 800, 600);
         jFrame.revalidate();
         jFrame.setVisible(true);
         var interim = 1l;
         System.out.println(interim);
-        jButton.addActionListener(e->{
+        jButton.addActionListener(e -> {
             System.out.println("New Game Pressed!");
-            FrontPanel frontPanel = FrontPanel.getInstance(GamePanel.GameLevel);
+//            FrontPanel frontPanel = FrontPanel.getInstance(GamePanel.GAME_PANEL);
         });
     }
 }
