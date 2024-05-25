@@ -1,10 +1,14 @@
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+
 import javax.swing.*;
 import java.awt.*;
 
 public class Main {
+    private static Logger logger= LogManager.getLogger(Main.class);
     public static void main(String[] args) {
-        System.out.println("Hello There!");
-        JFrame jFrame = new JFrame("Welcome to Best OF US");
+        logger.info("Hello There!\nWelcome to Best OF US");
+        JFrame jFrame = new JFrame("Best OF US v0.01");
         JPanel jPanel = new JPanel();
         JButton jButton = new JButton("New Game");
         jPanel.add(jButton);
@@ -14,11 +18,14 @@ public class Main {
         jFrame.setBounds(0, 0, 800, 600);
         jFrame.revalidate();
         jFrame.setVisible(true);
-        var interim = 1l;
-        System.out.println(interim);
+
         jButton.addActionListener(e -> {
             System.out.println("New Game Pressed!");
-            FrontPanel frontPanel = FrontPanel.getInstance();
+            FrontPanel frontPanel = FrontPanel.getInstance(100,100,800,600);
+            jFrame.add(frontPanel);
+            jFrame.remove(jPanel);
+            frontPanel.setVisible(true);
+            jFrame.revalidate();
         });
     }
 }
