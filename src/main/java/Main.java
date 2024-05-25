@@ -18,7 +18,7 @@ public class Main {
         System.out.println(interim);
         jButton.addActionListener(e -> {
             System.out.println("New Game Pressed!");
-//            FrontPanel frontPanel = FrontPanel.getInstance(GamePanel.GAME_PANEL);
+            FrontPanel frontPanel = FrontPanel.getInstance();
         });
     }
 }

@@ -1,22 +1,15 @@
 import javax.swing.*;
 
-public class FrontPanel<GameLevelFactory> extends JPanel {
-    private static Integer level = 0;
-    private GameLevelFactory levelFactory;
-    private JPanel levelPanel = new JPanel();
-    private static final FrontPanel instance = null;
+public class FrontPanel extends JPanel {
+    private static FrontPanel instance = null;
 
-    private FrontPanel(GamePanel gamePanel, int level) {
-        this.level = level;
-    }
-
-    private FrontPanel(GamePanel gamePanel) {
+    private FrontPanel() {
 
     }
 
-    public static FrontPanel getInstance(GamePanel gamePanel) {
-        if (instance == null)
-            return new FrontPanel(gamePanel);
+    public static FrontPanel getInstance() {
+        if (instance == null) instance = new FrontPanel();
         return instance;
     }
+
 }
