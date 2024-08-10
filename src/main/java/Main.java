@@ -7,7 +7,7 @@ import java.awt.*;
 public class Main {
     private static Logger logger= LogManager.getLogger(Main.class);
     public static void main(String[] args) {
-        logger.info("Hello There!\nWelcome to Best OF US");
+        logger.info("Welcome to Best OF US\nThe game started\n");
         JFrame jFrame = new JFrame("Best OF US v0.01");
         JPanel jPanel = new JPanel();
         JButton jButton = new JButton("New Game");
@@ -20,7 +20,7 @@ public class Main {
         jFrame.setVisible(true);
 
         jButton.addActionListener(e -> {
-            System.out.println("New Game Pressed!");
+            logger.info("New Game Pressed");
             FrontPanel frontPanel = FrontPanel.getInstance(100,100,800,600);
             jFrame.add(frontPanel);
             jFrame.remove(jPanel);

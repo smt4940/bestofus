@@ -1,0 +1,26 @@
+<Configuration status="WARN" name="bestOFus" monitorInterval="30">
+    <Properties>
+        <Property name="LOG_PATTERN">%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1} - %m%n</Property>
+    </Properties>
+    <Appenders>
+        <Console name="stdout" target="SYSTEM_OUT" follow="true">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+        </Console>
+        <File name="fout" fileName="bestOFus.log" append="true">
+            <PatternLayout>
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss} %-5p %m%n</Pattern>
+            </PatternLayout>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="error">
+            <AppenderRef ref="STDOUT"/>
+            <AppenderRef ref="fout"/>
+        </Root>
+        <Root level="INFO">
+            <AppenderRef ref="stdout" />
+            <AppenderRef ref="fout"/>
+        </Root>
+    </Loggers>
+
+</Configuration>
