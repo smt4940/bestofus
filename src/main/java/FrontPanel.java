@@ -11,7 +11,7 @@ public class FrontPanel extends JPanel {
     private FrontPanel(int x, int y, int width, int height) {
         this.setBounds(x,y,width,height);
         Rectangle rectangle = this.getBounds();
-        logger.info("The x cordinate is: "+rectangle.x + "\nThe y cordinate is: " + rectangle.y + "\nThe height is: " + rectangle.height + "\nThe width is: " + rectangle.width);
+        logger.info("The x coordinate is: "+rectangle.x + "\nThe y coordinate is: " + rectangle.y + "\nThe height is: " + rectangle.height + "\nThe width is: " + rectangle.width);
         this.setVisible(true);
         this.setBackground(Color.CYAN);
         this.revalidate();
